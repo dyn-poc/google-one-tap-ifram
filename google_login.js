@@ -27,10 +27,11 @@ window.onGoogleLibraryLoad = function () {
     allowed_parent_origin: [
       "https://dinavinter-literate-yodel-p75vgpg5755h76g6-8080.preview.app.github.dev",
       "https://gigya.login.dynidp.com",
-      "https://cdpn.io",
+      "https://cdpn.io",     
+      "https://dyn-poc.github.io",
       "https://*.gigya.com",
       "https://*.github.io",
-      "https://*.dynidp.com",
+      "https://*.dynidp.com"
     ],
     // Rednder mode for the UI style of the Google One Tap (NOT MENTIONED IN THE OFFICIAL DOCS)
     ui_mode: isMobile() ? "bottom_sheet" : "card",

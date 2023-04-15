@@ -35,6 +35,7 @@ window.onGoogleLibraryLoad = function () {
     ],
     // Rednder mode for the UI style of the Google One Tap (NOT MENTIONED IN THE OFFICIAL DOCS)
     ui_mode: isMobile() ? "bottom_sheet" : "card",
+    itp_support: true
   });
 
   // You can skip the next instruction if you don't want to show the "Sign-in" button

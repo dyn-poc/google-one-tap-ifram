@@ -8,9 +8,12 @@ function isMobile() {
 function handleCredentialResponse({credential}) {
   console.log("Encoded JWT ID token in IFRAME: " + credential);
   window.parent.postMessage({ type: 'handleGoogleYoloCb', credential, isGoogleYoloMessage: true }, '*');	
-  google.accounts.id.intermediate.notifyParentDone();
 }
 
+function onClose(){
+    google.accounts.id.intermediate.notifyParentDone();
+
+}
 
 window.onGoogleLibraryLoad = function () {
   // Initializing the Google One Tap 2.0

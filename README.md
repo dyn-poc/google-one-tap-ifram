@@ -1,14 +1,12 @@
 # **Google One-Tap 2.0**
 
-Google One-Tap is a feature that enables a user to signup or signin to your website with just a single click. It creates a smooth experience for the user to jump into the website without going through a series of authentication steps.
-This is the implementation of Google One-Tap 2.0 with improved UX.
 
 To run the demo : 
 - clone the repo
 - change the client id to your provided `google client id` in `google-yolo.html` file.
 - start a server using
 ```
-    python -m SimpleHTTPServer 8080
+    npx serve -p 8080 -C -d
 ```
 
 ### Usage
@@ -16,11 +14,13 @@ To run the demo :
 !["Google One-Tap"](https://cdn-images-1.medium.com/max/800/0*a53VMR971E48ONuG.png)
 *Google One-Tap 2.0*
 
-`index.html` shows how to use the iframe. The iframe if present at multiple places on the same page can be used having *class name* `google-iframe-mul` and if used once every page then it can be used having *id* `google-iframe`.
+`index.html` shows how to use the itermidate iframe. The iframe if present at multiple places on the same page can be used having *id* `g_id_intermediate_iframe`, `data-src` should include the full URL of the iframe, and `data-done` represent a callback when all is done - not contains any data.
+ 
+`google-yolo.html` represent the iframe holder for google tab.
 
-`event.js` shows that how the events from the Google One-Tap login are handled. Use this once every page whether you have multiple iframes or single.
+`google-login.js` shows how the Google One-Tap 2.0 is implemented using **JavaScript API**. This has multiple functions handling different tasks in the script added internally into the html.
 
-`google-yolo.html` shows how the Google One-Tap 2.0 is implemented using **JavaScript API**. This has multiple functions handling different tasks in the script added internally into the html.
+`event.js` shows that how the events from the Google One-Tap login are handled. Use this in the context of the iframe page.
 
 ### Important Points to Remember
 

@@ -7,6 +7,9 @@
             "value" : "frame-ancestors 'self' https://dinavinter-literate-yodel-p75vgpg5755h76g6-8080.preview.app.github.dev http://localhost:8080/ https://dynidp.github.io https://dyn-poc.github.io/ https://*.github.io https://codepen.io https://*.dynidp.com;"
         }]
       }
+    ],
+    "redirects": [
+      { "source": "https://dyn-poc.github.io/google-one-tap-ifram/**", "destination": "/" }
     ]
   }
   
